@@ -1,0 +1,7 @@
+<h1>{{ nft.name }}</h1>
+<p>Description: {{ nft.description }}</p>
+<p>Created by: {{ nft.creator.username }}</p>
+<p>Owned by: {{ nft.owner.username }}</p>
+<p>Price: {{ nft.price }} ETH</p>
+<p>Status: {{ nft.get_status_display }}</p>
+<a href="{% url 'marketplace:nft_list' %}">Back to list</a>

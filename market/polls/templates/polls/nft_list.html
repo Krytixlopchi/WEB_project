@@ -1,0 +1,18 @@
+<!-- polls/templates/polls/nft_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NFT List</title>
+</head>
+<body>
+    <h2>Список NFT</h2>
+    <ul>
+        {% for nft in nfts %}
+            <li>{{ nft.name }}</li>
+        {% empty %}
+            <li>Немає NFT</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
