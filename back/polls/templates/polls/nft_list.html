@@ -1,9 +1,0 @@
-{% for nft in nfts %}
-    <div>
-        <h2><a href="{% url 'marketplace:nft_detail' nft.id %}">{{ nft.name }}</a></h2>
-        <p>Created by: {{ nft.creator.username }}</p>
-        <p>Price: {{ nft.price }} ETH</p>
-    </div>
-{% empty %}
-    <p>No NFTs available.</p>
-{% endfor %}
