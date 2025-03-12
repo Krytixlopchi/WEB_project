@@ -4,10 +4,17 @@ from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from .models import NFT, Collection, User
+from .forms import ImageForm
+
+def upload(request):
+    return render(request, "polls/upload.html")
 
 def nft_list(request):
     nfts = NFT.objects.all()
     return render(request, "polls/nft_list.html", {"nfts": nfts})
+
+def index(request):
+    return render(request, "polls/index.html")
 
 def nft_detail(request, nft_id):
     """Детальна інформація про NFT"""
@@ -34,3 +41,16 @@ def user_registration(request):
         form = UserRegistrationForm()
     return render(request, 'polls/register.html', {'form': form})
     
+
+
+def image_upload_view(request):
+    """Process images uploaded by users"""
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            img_obj = form.instance
+            return render(request, 'polls\index2.html', {'form': form, 'img_obj': img_obj})
+    else:
+        form = ImageForm()    
+        return render(request, 'polls\index2.html', {'form': form})
