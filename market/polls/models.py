@@ -1,8 +1,13 @@
-from django.db import models
 
 # Create your models here.
 from django.db import models
 import uuid
+
+class Image(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images')
+    def __str__(self):
+        return self.title
 
 class User(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)# буде генеруватися випадковий унікальний UUID. не доступне для редагування через Django Admin
