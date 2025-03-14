@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krytixlopchi Shop</title>
+    <style></style>
+    <script src="{% static 'polls/scripts/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'polls/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="http://127.0.0.1:8000/media/images/logo.png"
+            alt=""
+            width="70"
+            height="70"
+        /></a>
+        <div>krytixlopchi</div>
+      </div>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <button>
+              <img
+                src="http://127.0.0.1:8000/media/images/basket.png"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+            </button>
+          </li>
+          <li><a href="{% url 'polls:login' %}">Profile</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner" id="banner">
+      <div class="banner-content">
+        <h2>Welcome to krytixlopchi NFT Shop!!</h2>
+        <a href="#" class="btn">Shop Now!</a>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Categories</h2>
+      <div class="category-list">
+        <div class="category-item">
+          <a href="#"
+            ><img src="imgs/categories_imgs/category_art.png" alt="Art NFT"
+          /></a>
+          <h3>Art</h3>
+        </div>
+        <div class="category-item">
+          <a href="#"
+            ><img src="imgs/categories_imgs/category_music.png" alt="Music NFT"
+          /></a>
+
+          <h3>Music</h3>
+        </div>
+        <div class="category-item">
+          <a href="#"
+            ><img
+              src="imgs/categories_imgs/category_games.png"
+              alt="Gaming NFT"
+          /></a>
+
+          <h3>Games</h3>
+        </div>
+        <div class="category-item">
+          <a href="#"
+            ><img
+              src="imgs/categories_imgs/category_videos.png"
+              alt="Videos NFT"
+          /></a>
+
+          <h3>Videos</h3>
+        </div>
+        <div class="category-item">
+          <a href="#"
+            ><img
+              src="imgs/categories_imgs/category_collectibles.png"
+              alt="Collectibles NFT"
+          /></a>
+
+          <h3>Collectibles</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <h2>Popular Collections</h2>
+      <div class="popular-list">
+        <div class="popular-item">
+          <a href="#"
+            ><img
+              src="imgs/collections_imgs/collection_1.png"
+              alt="NFT Collection 1"
+          /></a>
+
+          <h3>Collection 1</h3>
+        </div>
+        <div class="popular-item">
+          <a href="#"
+            ><img
+              src="imgs/collections_imgs/collection_2.png"
+              alt="sNFT Collection 2"
+          /></a>
+
+          <h3>Collection 2</h3>
+        </div>
+        <div class="popular-item">
+          <a href="#"
+            ><img
+              src="imgs/collections_imgs/collection_3.png"
+              alt="NFT Collection 3"
+          /></a>
+
+          <h3>Collection 3</h3>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Про нас</h2>
+      <p>Ми – платформа NFT, що об'єднує митців та колекціонерів.</p>
+    </section>
+    <section class="team">
+      <h2>Наша команда</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="imgs/team_member1.png" alt="Team Member 1" />
+          <h3>Олексій - backend developer</h3>
+        </div>
+        <div class="team-member">
+          <img src="imgs/team_member2.png" alt="Team Member 2" />
+          <h3>Євген - main frontend developer</h3>
+        </div>
+        <div class="team-member">
+          <img src="imgs/team_member3.png" alt="Team Member 3" />
+          <h3>Сергій - desighner and frontend developer</h3>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
